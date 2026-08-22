@@ -1,7 +1,3 @@
-output "workspacesweb_session_logger_associations_id" {
-  description = "Map of id values across all workspacesweb_session_logger_associations, keyed the same as var.workspacesweb_session_logger_associations"
-  value       = { for k, v in aws_workspacesweb_session_logger_association.workspacesweb_session_logger_associations : k => v.id if v.id != null && length(v.id) > 0 }
-}
 output "workspacesweb_session_logger_associations_portal_arn" {
   description = "Map of portal_arn values across all workspacesweb_session_logger_associations, keyed the same as var.workspacesweb_session_logger_associations"
   value       = { for k, v in aws_workspacesweb_session_logger_association.workspacesweb_session_logger_associations : k => v.portal_arn if v.portal_arn != null && length(v.portal_arn) > 0 }
